@@ -85,8 +85,8 @@ const VideoPage = () => {
 
   return (
   <div className="h-screen flex items-center">
-      <div className="w-full py-12 p-8 lg:flex gap-8 justify-center">
-      <div className="border-2 min-w-64 border-black w-full lg:hidden">
+      <div className="w-full py-12 p-8 lg:flex lg:flex-row-reverse gap-8 justify-center">
+      <div className="border-2 min-w-64 border-black w-full">
         <ReactPlayer
           ref={playerRef}
           url={`https://www.youtube.com/watch?v=${videoId}`}
@@ -116,21 +116,6 @@ const VideoPage = () => {
             </p>
           </div>
         </div>
-        <div className="border-2 hidden lg:flex justify-center items-center min-w-64 border-black w-full">
-     <>
-     <ReactPlayer
-          ref={playerRef}
-          url={`https://www.youtube.com/watch?v=${videoId}`}
-          controls
-          playing={playing}
-          onPause={handlePause}
-          onPlay={handlePlay}
-          onProgress={handleProgress}
-          width="100%"
-          height="100%"
-        />
-     </>
-      </div>
       </div>
   </div>
   );
